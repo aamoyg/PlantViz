@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/graph.css">
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/legend.css">
+    <link rel="stylesheet" href="css/stylesheet.css">    
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#">PlantViz Sensor Visualization</a>
+          <ul class="nav">
+            <!-- 
+            <li class="active"><a href="#">Dakar</a></li>
+            -->
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="jumbotron">
+          <h1>PlantViz</h1>
+          <p class="lead">Feeds from your PlantViz Hydroponics Bay, at your fingertips!</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span6 offset3 pagination-centered">
+          <form action="#" class="form-inline">
+            <strong>Configure Feed (Required):</strong>
+            <br />
+            <br />
+            <input id="key" type="text" placeholder="API Key">
+            <input id="feed" type="text" placeholder="Feed ID">
+            <br />
+            <br />
+            <strong>Configure Time (Optional):</strong>
+            <br />
+            <br />
+		    <input id="startDay" type="text" placeholder="Start Date (YYYY-MM-DD)">
+ 	   		<input id="startTime" type="text" placeholder="Start Time (HH-MM-SS)">
+ 	   		<br />
+	   		<input id="endDay" type="text" placeholder="End Date (YYYY-MM-DD)">
+ 	    	<input id="endTime" type="text" placeholder="End Time (HH-MM-SS)">
+ 	    	<br />
+            <br />
+            <strong>Configure Options (Optional):</strong>
+            <br />
+            <br />
+	    	<input id="interval" type="text" placeholder="Data Interval">
+	    	<br />
+	    	<input id="operation" type="text" placeholder="Operation ('average' or 'sum')">
+	    	<br />
+	    	<input id="channel" type="text" placeholder="Channel">
+	    	<br />
+            <br />
+	    <strong>Punch it.</strong>
+	    <br />
+            <button id="new-feed" class="btn btn-primary"><i class="icon-plus icon-white"></i></button>
+          </form>
+          <div id="new-feed-alert" class="alert hide">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Warning!</strong> Something doesn't seem to be configured right!'
+          </div>
+          <button class="btn btn-link sample-data" data-key='4OysxNVaHiB1cwavaoKMXywwXdw1KYZaMODHdA8ZcrS9nxO0' data-feed='803439804'  data-channel='temp_01' data-startDay='' data-startTime='' data-endDay='' data-endTime='00:00:00' data-interval='' data-operation=''>Temp Sensor</button>
+          <button class="btn btn-link sample-data" data-key='7lIgzoL0kqVKTKnoALUmMPPm6asUqjDsrXltHpQrMAW6KrdX' data-feed='1208007568'  data-channel='humidity_01' data-startDay='' data-startTime='00:00:00' data-endDay='' data-endTime='00:00:00' data-interval='' data-operation=''>Humidity Sensor</button>
+          <button class="btn btn-link sample-data" data-key='qvmVLgPcR3YnjVXn0IZ7EZvVpPebuj7ofI5NpVEiBskL5OqH' data-feed='1812851084'  data-channel='light_01' data-startDay='' data-startTime='' data-endDay='' data-endTime='00:00:00' data-interval='' data-operation=''>Light Sensor</button>
+        </div>
+      </div>
+ 
+ 	<div id="graphs">
+ 	<hr />
+    </div>
+      
+      <div class="footer">
+        <small>
+          Made by <a href="mailto:aamoyg@linux.ucla.edu">Aamoy Gupta</a> - &copy; 2013 - Source code under the MIT License</a><br/>
+          Built and functioning thanks to <a href="http://twitter.github.io/bootstrap/">Twitter Bootstrap</a>, <a href="http://momentjs.com/">Moment.js</a> and the <a href="http://code.highcharts.com/">Highcharts</a> graph library.
+        </small>
+      </div>
+      
+    </div>
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <script src="http://underscorejs.org/underscore-min.js"></script>
+    <script src="js/moment.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/xivelyjs-1.0.4.min.js"></script>
+  	<script src="js/d3.v2.js"></script>
+  	<script src="js/rickshaw.min.js"></script>
+    	<script src="http://code.highcharts.com/stock/highstock.js"></script>
+    	<script src="js/xively-viewer.js"></script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-15404974-1']);
+      _gaq.push(['_setSiteSpeedSampleRate', 100]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
