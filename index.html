@@ -1,4 +1,6 @@
 <!doctype html>
+
+
 <html>
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -7,12 +9,34 @@
     <link rel="stylesheet" href="css/detail.css">
     <link rel="stylesheet" href="css/legend.css">
     <link rel="stylesheet" href="css/stylesheet.css">    
+
+    <style>
+#key,#feed, #endDay, #endTime, #startDay, #startTime, #interval, #operation, #channel {
+        border: 1px solid green;
+         border-radius: 20px;
+
+}
+
+a {
+        color:green;
+}
+.btn-link {
+        color:green;
+}
+rect {
+        fill:lightgreen;
+}
+path {
+        stroke: green;
+        stroke-width:1px;
+}
+</style>
   </head>
-  <body>
+  <body style = "background: lightgreen; color: darkgreen;">
     <div class="container">
       <div class="navbar">
-        <div class="navbar-inner">
-          <a class="brand" href="#">PlantViz Sensor Visualization</a>
+        <div class="navbar-inner" style = "background:darkgreen;">
+          <a class="brand" href="#"  style="color: white;text-shadow: none;"">PlantViz Sensor Visualization</a>
           <ul class="nav">
             <!-- 
             <li class="active"><a href="#">Dakar</a></li>
@@ -23,6 +47,7 @@
       
       <div class="row">
         <div class="jumbotron">
+          <img src = "img/pviz.png" style = "max-height: 128px;"></img>
           <h1>PlantViz</h1>
           <p class="lead">Feeds from your PlantViz Hydroponics Bay, at your fingertips!</p>
         </div>
@@ -43,25 +68,30 @@
 		    <input id="startDay" type="text" placeholder="Start Date (YYYY-MM-DD)">
  	   		<input id="startTime" type="text" placeholder="Start Time (HH-MM-SS)">
  	   		<br />
+            <br />
 	   		<input id="endDay" type="text" placeholder="End Date (YYYY-MM-DD)">
  	    	<input id="endTime" type="text" placeholder="End Time (HH-MM-SS)">
  	    	<br />
+ 	    	
             <br />
             <strong>Configure Options (Optional):</strong>
             <br />
             <br />
 	    	<input id="interval" type="text" placeholder="Data Interval">
 	    	<br />
+	    	            <br />
 	    	<input id="operation" type="text" placeholder="Operation ('average' or 'sum')">
 	    	<br />
+	    	            <br />
 	    	<input id="channel" type="text" placeholder="Channel">
 	    	<br />
+	    	            <br />
             <br />
 	    <strong>Punch it.</strong>
 	    <br />
-            <button id="new-feed" class="btn btn-primary"><i class="icon-plus icon-white"></i></button>
+            <button id="new-feed" class="btn btn-primary" style = "background:green;"><i class="icon-plus icon-white"></i></button>
           </form>
-          <div id="new-feed-alert" class="alert hide">
+          <div id="new-feed-alert" class="alert hide" >
             <button type="button" class="close" data-dismiss="alert">&times;</button>
             <strong>Warning!</strong> Something doesn't seem to be configured right!'
           </div>
